@@ -1,0 +1,362 @@
+body {
+    background-color: #f6f8fa;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #24292e;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #24292e;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: transform 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    color: #4CAF50;
+}
+
+nav button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+nav button:hover {
+    transform: scale(1.2);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card .title {
+    color: #24292e;
+    transition: opacity 0.3s ease;
+}
+
+.description {
+    display: none;
+    color: #ffffff;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 0.8em;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .title {
+    opacity: 0;
+}
+
+.card:hover .description {
+    display: block;
+    opacity: 1;
+}
+
+body.dark-mode {
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+    color: #ffffff;
+}
+
+body.dark-mode header {
+    background-color: #3c4043;
+}
+
+body.dark-mode nav {
+    background-color: #3c4043;
+}
+
+body.dark-mode .card {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+}
+
+body.dark-mode .card .title {
+    color: #ffffff;
+}
+
+body.dark-mode .description {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .card {
+        width: 90%;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#about-us,
+#mission-statement {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.about-image,
+.about-title,
+.contact-title,
+.belief-title {
+    color: #333;
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.about-title {
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+.about-content {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.belief-title {
+    font-size: 1.5em;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.about-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.about-list li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    text-align: left;
+    color: #444;
+}
+
+.contact-title {
+    font-size: 1.8em;
+    margin: 20px 0;
+}
+
+.highlight {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #007bff;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body.dark-mode #about-us,
+body.dark-mode #mission-statement {
+    background-color: #1f1f1f;
+    color: #f9f9f9;
+}
+
+body.dark-mode .about-title,
+body.dark-mode .belief-title,
+body.dark-mode .contact-title {
+    color: #f9f9f9;
+}
+
+body.dark-mode .about-content,
+body.dark-mode .about-list li {
+    color: #e0e0e0;
+}
+
+body.dark-mode a {
+    color: #66b2ff;
+}
+
+body.dark-mode a:hover {
+    text-decoration: underline;
+}
+
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: float 5s infinite ease-in-out;
+}
+
+.circle:nth-child(1) {
+    background-color: #4CAF50;
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.circle:nth-child(2) {
+    background-color: #2196F3;
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.circle:nth-child(3) {
+    background-color: #FF9800;
+    width: 120px;
+    height: 120px;
+    top: 40%;
+    left: 70%;
+    animation-delay: 0.5s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+header, nav, section {
+    position: relative;
+    z-index: 1;
+}
+
+.hidden-background {
+    display: none;
+}
+
+#mission-statement h2 {
+    font-size: 2.5em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+#mission-statement h3 {
+    font-size: 2em;
+    color: #4CAF50;
+    margin: 20px 0;
+}
+
+#mission-statement p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+    margin: 10px 0;
+}
+
+#mission-statement ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+}
+
+#mission-statement ul li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    text-align: left;
+    color: #444;
+}
